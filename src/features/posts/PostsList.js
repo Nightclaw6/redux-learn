@@ -7,6 +7,7 @@ import ReactionButtons from "./ReactionButtons";
 const PostsList = () => {
     const posts = useSelector(selectAllPosts)
 
+    // order 2 timestamps (a,b) by date an create a new array "orderedPosts"
     const orderedPosts = posts.slice().sort((a, b) => b.date.localeCompare(a.date))
 
     const renderedPosts = orderedPosts.map(post => (
